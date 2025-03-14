@@ -10,6 +10,7 @@ function App() {
     <>
       <h1 class="">hello</h1>
       <p class="text-amber-300">tailwindcss</p>
+      <h1>hi</h1>
     </>
   )
 }
