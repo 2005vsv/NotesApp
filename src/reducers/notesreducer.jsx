@@ -12,11 +12,28 @@ function notesreducer(state,{type,payload}) {
       }
     case 'ADD_NOTE':
       return{
-        ...state,notes:[...state.notes,{text:state.text,title:state.title,id:uuid()}]
+        ...state,notes:[...state.notes,{text:state.text,title:state.title,id:uuid(),isPinned:false}]
       }
     case 'CLEAR_INPUT':
       return{
         ...state,title:'',text:''
+      }
+    case 'PIN':
+      return{
+        ...state,notes:state.notes.map(note=>note.id===payload.id ? {...note,isPinned:true}:note)
+      }
+    case 'UNPIN':
+      return{
+        ...state,notes:state.notes.map(note=>note.id===payload.id ? {...note,isPinned:false}:note)
+      }
+    case 'ARCHIVE':
+      return{
+        ...state,archive:[...state.archive,state.notes.find(({id})=>id===payload.id)],
+        notes:state.notes.filter(({id})=>id!==payload.id)
+      }
+    case 'UNARCHIVE':
+      return{
+        ...state,notes:[...state.notes,state.archive.find(({id})=>id===payload.id)],archive:state.archive.filter(({id})=>id!==payload.id)
       }
     default:return state
   }

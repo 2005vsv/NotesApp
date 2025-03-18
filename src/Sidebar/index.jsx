@@ -1,9 +1,9 @@
 import React from "react";
 import {  NavLink } from "react-router-dom";
 function Sidebar() {
-  const getstyles=({isactive})=>{
+  const getstyles=({isActive})=>{
     
-    return isactive ? 'bg-indigo-800 flex gap-1 p-2 rounded-tr-full rounded-br-full':' hover:bg-blue-400 flex gap-3 p-1  rounded-tr-full rounded-br-full';
+    return isActive ? 'bg-blue-400 flex gap-1 p-2 rounded-tr-full rounded-br-full ':' hover:bg-blue-400 flex gap-3 p-1  rounded-tr-full rounded-br-full';
   }
   return (
     <aside className="flex flex-col gap-4 border-r-2 border-gray-100 w-35 h-screen p-3 text-black">
