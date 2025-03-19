@@ -1,8 +1,8 @@
 import React from "react";
 import { usenotes } from "../Context/notescontext";
-import { Findnotesinarchive } from "../utils/Findnotesinarchive/";
-import { Findnotesinimportant } from "../utils/Findnotesinimportant/";
-import { Findnotesinbin } from "../utils/Findnotesinbin/";
+import { findnotesinarchive } from "../utils/findNotesinarchive";
+import { findnotesinbin } from "../utils/findnotesinbin";
+import { findnotesinimportant } from "../utils/findnotesinimportant";
 
 function Notescard({ id, title, text, isPinned }) {
   const { notesdispatch, archive, important ,bin} = usenotes();
@@ -53,9 +53,9 @@ function Notescard({ id, title, text, isPinned }) {
   }
  
 
-  const isNotesinarchive = Findnotesinarchive(archive, id);
-  const isNotesinimportant = Findnotesinimportant(important, id);
-  const isNotesinbin=Findnotesinbin(bin,id);
+  const isNotesinarchive = findnotesinarchive(archive, id);
+  const isNotesinimportant = findnotesinimportant(important, id);
+  const isNotesinbin=findnotesinbin(bin,id);
   return (
     <div
       className="w-72 h-auto border border-blue-500 rounded-xl shadow-lg p-4 bg-white hover:shadow-2xl transition-shadow duration-200 flex flex-col justify-between"
