@@ -50,7 +50,7 @@ function Notescard({ id, title, text, isPinned }) {
     })
 
   }
-  
+ 
 
   const isNotesinarchive = findnotesinarchive(archive, id);
   const isNotesinimportant = findnotesinimportant(important, id);

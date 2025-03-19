@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <header className="flex px-5 py-2 gap-3 border-b-3 border-gray-100">
+    <header className="flex px-5 py-2 gap-3 border-b-4 border-gray-100">
       <div className="w-12 h-12">
         <img
           src="https://cdn-icons-png.flaticon.com/128/10270/10270677.png"

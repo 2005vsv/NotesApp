@@ -4,8 +4,9 @@ import Sidebar from "../../Sidebar";
 
 import Notescard from "../../Notescard";
 import { usenotes } from "../../Context/notescontext";
+import Footer from "../../footer";
 function Home() {
-  const { title, text, notes,archive, notesdispatch } = usenotes();
+  const { title, text, notes,archive,important,bin, notesdispatch } = usenotes();
 
   const ontitlechange = (e) => {
     notesdispatch({
@@ -56,7 +57,7 @@ function Home() {
               <button
                 disabled={title.length === 0 && text.length === 0}
                 onClick={onaddclick}
-                className="absolute bottom-2 right-2 cursor-pointer bg-blue-500 text-white rounded-full p-3 hover:bg-blue-600 transition duration-200"
+                className="absolute bottom-3.5 right-1 cursor-pointer bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 transition duration-200"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +107,7 @@ function Home() {
           </div>
         </main>
       </Fragment>
+      <Footer/>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function Sidebar() {
     return isActive ? 'bg-blue-400 flex gap-1 p-2 rounded-tr-full rounded-br-full ':' hover:bg-blue-400 flex gap-3 p-1  rounded-tr-full rounded-br-full';
   }
   return (
-    <aside className="flex flex-col gap-4 border-r-2 border-gray-100 w-35 h-screen p-3 text-black">
+    <aside className="flex flex-col gap-4 border-r-4 border-gray-100 w-35 h-screen p-3 text-black">
       <NavLink to="/" className={getstyles}>
         <div className="flex gap-1 ">
           <svg
