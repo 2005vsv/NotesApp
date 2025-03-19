@@ -1,6 +1,6 @@
 import React from "react";
 import { usenotes } from "../Context/notescontext";
-import { findnotesinarchive } from "../utils/findNotesinarchive";
+import { findnotesinarchive } from "../Pages/Home/Archive/findnotesinarchive";
 import { findnotesinbin } from "../utils/findnotesinbin";
 import { findnotesinimportant } from "../utils/findnotesinimportant";
 
